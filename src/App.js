@@ -13,7 +13,6 @@ function App() {
         throw new Error('Network response was not ok');
       }
       const result = await response.json();
-      console.log(result);
       setAdviceId(result.slip.id);
       setAdvice(result.slip.advice);
     } catch (error) {
