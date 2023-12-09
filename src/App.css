@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #202733;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+    background-color: #313A48;
+    border-radius: 15px;
+    width: 444px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* text */
+.title {
+    font-size: 13px;
+    color: #53FFAA;
+    letter-spacing: 4.09px;
+    font-weight: 800;
+    margin-bottom: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+    font-size: 28px;
+    color: #CEE3E9;
+    text-align: center;
+    letter-spacing: -0.3px;
+    font-weight: 800;
+    margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divider {
+    width: 100%;
+    height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44.5px;
+}
+
+.divider-line {
+    width: 196px;
+    height: 1px;
+    background-color: #4F5D74;
+}
+
+.divider-par {
+    display: flex;
+    width: 20px;
+    height: 16px;
+    justify-content: space-between;
+}
+
+.line {
+    background-color: #CEE3E9;
+    width: 6px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+/* btn component */
+
+.btn {
+    background-color: #53FFAA;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -32px;
+}
+
+.btn:hover {
+    box-shadow: 0 0 40px 0 #53FFAA;
+}
+
+.btn-img {
+    width: 24px;
+    height: 24px;
+}
+
+
+@media only screen and (max-width: 560px) {
+
+    .card {
+        border-radius: 10px;
+        width: 295px;
+        padding: 40px 24px;
+    }
+
+    /* text */
+    .title {
+        font-size: 11px;
+        letter-spacing: 3.46px;
+        margin-bottom: 24px;
+    }
+
+    .content {
+        font-size: 24px;
+        letter-spacing: -0.26px;
+        margin-bottom: 24px;
+    }
+
+    .divider {
+        width: 100%;
+        height: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 26px;
+    }
+
+    .divider-line {
+        width: 122px;
+        height: 1px;
+        background-color: #4F5D74;
+    }
+
 }
