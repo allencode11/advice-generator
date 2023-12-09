@@ -41,7 +41,7 @@ body {
     text-align: center;
     letter-spacing: -0.3px;
     font-weight: 800;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .divider {
@@ -51,7 +51,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 44.5px;
+    margin-bottom: 22.5px;
 }
 
 .divider-line {
