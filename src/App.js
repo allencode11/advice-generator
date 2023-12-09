@@ -1,14 +1,34 @@
 import './App.css';
 import btnImg from './assets/images/btn-img.png';
+import { useState } from 'react';
 
 function App() {
+  const [adviceId, setAdviceId] = useState(117);
+  const [advice, setAdvice] = useState('“It is easy to sit up and take notice, what\'s difficult is getting up and taking action.”');
+
+  const newAdvice = async () => {
+    try {
+      const response = await fetch('https://api.adviceslip.com/advice');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const result = await response.json();
+      console.log(result);
+      setAdviceId(result.slip.id);
+      setAdvice(result.slip.advice);
+    } catch (error) {
+
+    }
+  }
+
+
   return (
     <div className='main'>
       <div className='card'>
 
-        <div className='title'>ADVICE #117</div>
+        <div className='title'>ADVICE #{adviceId}</div>
 
-        <div className='content'>“It is easy to sit up and take notice, what's difficult is getting up and taking action.”</div>
+        <div className='content'>{advice}</div>
 
         <div className='divider'>
           <div className='divider-line'></div>
@@ -19,7 +39,7 @@ function App() {
           <div className='divider-line'></div>
         </div>
 
-        <div className='btn'>
+        <div className='btn' onClick={newAdvice}>
           <img className='btn-img' alt='btn-img' src={btnImg}/>
         </div>
       </div>
